@@ -1,5 +1,5 @@
 
-# Copyright 2016 Joanna Mπkosa, Anna Skrzyd≥o, Aleksandra Magie≥da, Micha≥ Kot, Mateusz Kiry≥a, Bartosz Kowalski, Klaudia Stano
+# Copyright 2016 Joanna MƒÖkosa, Anna Skrzyd≈Ço, Aleksandra Magie≈Çda, Micha≈Ç Kot, Mateusz Kiry≈Ça, Bartosz Kowalski, Klaudia Stano
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
 # except in compliance with the License. You may obtain a copy of the License at
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -8,7 +8,7 @@
 # OF ANY KIND, either express or implied. See the License for the specific language governing
 # permissions and limitations under the License. 
 # 
-# Copyright 2016 Joanna Mπkosa, Anna Skrzyd≥o, Aleksandra Magie≥da, Micha≥ Kot, Mateusz Kiry≥a, Bartosz Kowalski, Klaudia Stano
+# Copyright 2016 Joanna MƒÖkosa, Anna Skrzyd≈Ço, Aleksandra Magie≈Çda, Micha≈Ç Kot, Mateusz Kiry≈Ça, Bartosz Kowalski, Klaudia Stano
 # Licensed under the CC BY-SA 3.0 (the "License"); you may not use this file except in
 # compliance with the License. You may obtain a copy of the License at
 # https://creativecommons.org/licenses/by-sa/3.0/pl/legalcode
@@ -29,61 +29,61 @@ raw <- heritage.df
 #### Data selection ####
 # for the prototype version of the application we excluded those monuments in Warsaw that could not be easily located on the map (e.g. house estates, districts, statues etc.) or were not very distinctive (private houses, villas etc.)
 
-raw <- raw[-grep("Za≥oøenie urbanistyczne", raw$name),]
-raw <- raw[-grep("Uk≥ad urbanistyczny", raw$name),]
-raw <- raw[-grep("uk≥ad urbanistyczny", raw$name),]
-raw <- raw[-grep("zespÛ≥ urbanistyczny", raw$name),]
+raw <- raw[-grep("Za≈Ço≈ºenie urbanistyczne", raw$name),]
+raw <- raw[-grep("Uk≈Çad urbanistyczny", raw$name),]
+raw <- raw[-grep("uk≈Çad urbanistyczny", raw$name),]
+raw <- raw[-grep("zesp√≥≈Ç urbanistyczny", raw$name),]
 raw <- raw[-grep("Osiedle", raw$name),]
 raw <- raw[-grep("Osielde", raw$name),]
 raw <- raw[-grep("Kolonia", raw$name),]
-raw <- raw[-grep("Saska KÍpa", raw$name),]
-raw <- raw[-grep("Øoliborz historyczny", raw$name),]
+raw <- raw[-grep("Saska Kƒôpa", raw$name),]
+raw <- raw[-grep("≈ªoliborz historyczny", raw$name),]
 
 raw <- subset(raw, !(raw$name == "Dom"))
 raw <- subset(raw, !(raw$name == "Dom wielorodzinny"))
 raw <- subset(raw, !(raw$name == "Dom (segment)"))
 raw <- subset(raw, !(raw$name == "Dom (oficyna)"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç 2 domÛw"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç domÛw"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç domu"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç domu (bliüniak)"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç domu (segment)"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö 2 dom√≥w"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö dom√≥w"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö domu"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö domu (bli≈∫niak)"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö domu (segment)"))
 raw <- subset(raw, !(raw$name == "Kamienica"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç kamienicy"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö kamienicy"))
 raw <- subset(raw, !(raw$name == "Kamienica (z oficynami)"))
 raw <- subset(raw, !(raw$name == "Kamienica frontowa"))
-raw <- subset(raw, !(raw$name == "Kamienica z oficynπ"))
+raw <- subset(raw, !(raw$name == "Kamienica z oficynƒÖ"))
 raw <- subset(raw, !(raw$name == "Kamienica z oficynami"))
-raw <- subset(raw, !(raw$name == "Kamienica ze skrzyd≥ami"))
+raw <- subset(raw, !(raw$name == "Kamienica ze skrzyd≈Çami"))
 raw <- subset(raw, !(raw$name == "Kamienica, ob. biura"))
 raw <- subset(raw, !(raw$name == "Kamienica, ob. biblioteka"))
 raw <- subset(raw, !(raw$name == "Willa"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç willi"))
-raw <- subset(raw, !(raw$name == "Zespo≥Ç willi (segment)"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö willi"))
+raw <- subset(raw, !(raw$name == "Zespo≈Ç‚Äö willi (segment)"))
 raw <- subset(raw, !(raw$name == "Willa letniskowa"))
-raw <- subset(raw, !(raw$name == "Willa bliüniacza"))
+raw <- subset(raw, !(raw$name == "Willa bli≈∫niacza"))
 raw <- subset(raw, !(raw$name == "Willa (segment)"))
 raw <- subset(raw, !(raw$name == "Willa (elewacje)"))
 raw <- subset(raw, !(raw$name == "Willa (elewacje)"))
 raw <- subset(raw, !(raw$name == "Dom mieszkalny"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç Twierdzy Warszawa"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö Twierdzy Warszawa"))
 raw <- subset(raw, !(raw$name == "Budynek"))
 raw <- subset(raw, !(raw$name == "Zabudowa"))
 raw <- subset(raw, !(raw$name == "Dworek"))
-raw <- subset(raw, !(raw$name == "Dom, czÍúÊ Kolonii £askiego"))
-raw <- subset(raw, !(raw$id == "626279" & raw$name == "ZespÛ≥Ç dworski"))
-raw <- subset(raw, !(raw$id == "625246" & raw$name == "ZespÛ≥Ç dworski"))
-raw <- subset(raw, !(raw$id == "625738" & raw$name == "ZespÛ≥Ç dworski"))
-raw <- subset(raw, !(raw$name == "ZespÛ≥Ç dworski WyczÛ≥ki (I)"))
+raw <- subset(raw, !(raw$name == "Dom, czƒô≈õƒá Kolonii ≈Åaskiego"))
+raw <- subset(raw, !(raw$id == "626279" & raw$name == "Zesp√≥≈Ç‚Äö dworski"))
+raw <- subset(raw, !(raw$id == "625246" & raw$name == "Zesp√≥≈Ç‚Äö dworski"))
+raw <- subset(raw, !(raw$id == "625738" & raw$name == "Zesp√≥≈Ç‚Äö dworski"))
+raw <- subset(raw, !(raw$name == "Zesp√≥≈Ç‚Äö dworski Wycz√≥≈Çki (I)"))
 raw <- subset(raw, !(raw$name == "Zabudowa parzystej strony"))
 raw <- subset(raw, !(raw$name == "Dom Jana Toeplitza"))
 raw <- subset(raw, !(raw$name == "Mostek"))
 raw <- subset(raw, !(raw$name == "Figura Matki Boskiej Passawskiej"))
-raw <- subset(raw, !(raw$name == "Dom rodziny AvenariusÛw"))
+raw <- subset(raw, !(raw$name == "Dom rodziny Avenarius√≥w"))
 raw <- subset(raw, !(raw$street == ""))
-raw <- subset(raw, !(raw$id == "625308" & raw$name == "Szko≥a"))
-raw <- subset(raw, !(raw$id == "625419" & raw$name == "ZespÛ≥Ç szko≥y"))
-raw <- subset(raw, !(raw$name == "3 mogi≥y na cmentarzu"))
+raw <- subset(raw, !(raw$id == "625308" & raw$name == "Szko≈Ça"))
+raw <- subset(raw, !(raw$id == "625419" & raw$name == "Zesp√≥≈Ç‚Äö szko≈Çy"))
+raw <- subset(raw, !(raw$name == "3 mogi≈Çy na cmentarzu"))
 raw <- raw[-grep("Pomnik", raw$name),]
 # raw <- raw[-grep("pomnik", raw$name),]
 
@@ -94,36 +94,36 @@ raw$name <- as.character(raw$name)
 
 raw[which(raw$id == "625680"),]$name <- "Hotel Bristol"
 raw[which(raw$id == "625648"),]$name <- "Hotel Europejski"
-raw[which(raw$id == "625050"),]$name <- "ZdrÛjj KrÛlewski"
-raw[which(raw$id == "625271"),]$name <- "Szko≥a Pod Mπdrπ Sowπ"
+raw[which(raw$id == "625050"),]$name <- "Zdr√≥jj Kr√≥lewski"
+raw[which(raw$id == "625271"),]$name <- "Szko≈Ça Pod MƒÖdrƒÖ SowƒÖ"
 raw[which(raw$id == "626588"),]$name <- "Liceum i Gimnazjum im. Prusa"
-raw[which(raw$id == "625050"),]$name <- "ZdrÛj KrÛlewski"
-raw[which(raw$id == "625814"),]$name <- "Wyøsze Seminarium Duchowne Diecezji Warszawsko-Praskiej"
-raw[which(raw$id == "625762"),]$name <- "Pa≥acyk ks. Wasyla Do≥gorukowa (ob. Ambasada S≈Çowacji)"
-raw[which(raw$id == "625772"),]$name <- "Pa≥acyk Stanis≈Çawa Ursyna-Rusieckiego"
-raw[which(raw$id == "625891"),]$name <- "Pa≥acyk Branickich-Lubomirskich"
+raw[which(raw$id == "625050"),]$name <- "Zdr√≥j Kr√≥lewski"
+raw[which(raw$id == "625814"),]$name <- "Wy≈ºsze Seminarium Duchowne Diecezji Warszawsko-Praskiej"
+raw[which(raw$id == "625762"),]$name <- "Pa≈Çacyk ks. Wasyla Do≈Çgorukowa (ob. Ambasada Sƒπ‚Äöowacji)"
+raw[which(raw$id == "625772"),]$name <- "Pa≈Çacyk Stanisƒπ‚Äöawa Ursyna-Rusieckiego"
+raw[which(raw$id == "625891"),]$name <- "Pa≈Çacyk Branickich-Lubomirskich"
 
-raw[which(raw$id == "626089"),]$name <- "Dawny szpital åw. Ducha"
-raw[which(raw$id == "626429"),]$name <- "Figura úw. Jana Nepomucena (1756)"
-raw[which(raw$id == "626272"),]$name <- "Figura úw. Jana Nepomucena (1731)"
-raw[which(raw$id == "625623"),]$name <- "ZespÛ≥Ç koszar (ul. Kozielska)"
-raw[which(raw$id == "625754"),]$name <- "ZespÛ≥Ç koszar (11 listopada)"
+raw[which(raw$id == "626089"),]$name <- "Dawny szpital ≈öw. Ducha"
+raw[which(raw$id == "626429"),]$name <- "Figura ≈õw. Jana Nepomucena (1756)"
+raw[which(raw$id == "626272"),]$name <- "Figura ≈õw. Jana Nepomucena (1731)"
+raw[which(raw$id == "625623"),]$name <- "Zesp√≥≈Ç‚Äö koszar (ul. Kozielska)"
+raw[which(raw$id == "625754"),]$name <- "Zesp√≥≈Ç‚Äö koszar (11 listopada)"
 raw[which(raw$id == "730748"),]$name <- "Piwnice willi Jasny Dom"
 raw[which(raw$id == "625227"),]$name <- "Liceum LXXV im. Jana III Sobieskiego"
-raw[which(raw$id == "624832"),]$name <- "ZespÛ≥Ç klasztorny bernardynÛw (Parafia úw. Bonifacego)"
+raw[which(raw$id == "624832"),]$name <- "Zesp√≥≈Ç‚Äö klasztorny bernardyn√≥w (Parafia ≈õw. Bonifacego)"
 raw[which(raw$id == "625140"),]$name <- "Dawny Gmach Towarzystwa Kredytowego Miejskiego"
-raw[which(raw$id == "625642"),]$name <- "Wydzia≥ Dziennikarstwa i Nauk Politycznych (d. Teologicum)"
-raw[which(raw$id == "626171"),]$name <- "DwÛr drewniany (po≈Ç. XIX wieku)"
+raw[which(raw$id == "625642"),]$name <- "Wydzia≈Ç Dziennikarstwa i Nauk Politycznych (d. Teologicum)"
+raw[which(raw$id == "626171"),]$name <- "Dw√≥r drewniany (poƒπ‚Äö. XIX wieku)"
 raw[which(raw$id == "624910"),]$name <- "Cmentarz Wilanowski"
-raw[which(raw$id == "718434"),]$name <- "Garaø Zak≥adu Oczyszczania Miasta, ob. Teatr Nowy"
-raw[which(raw$id == "626289"),]$name <- "Dawny pawilon szpitala Czerwonego Krzyøa"
+raw[which(raw$id == "718434"),]$name <- "Gara≈º Zak≈Çadu Oczyszczania Miasta, ob. Teatr Nowy"
+raw[which(raw$id == "626289"),]$name <- "Dawny pawilon szpitala Czerwonego Krzy≈ºa"
 raw[which(raw$id == "741226"),]$name <- "Kino Ochota, ob. Och-Teatr"
-raw[which(raw$id == "625226"),]$name <- "Dawny Dom PracownikÛw Stacji Pomp Rzecznych"
+raw[which(raw$id == "625226"),]$name <- "Dawny Dom Pracownik√≥w Stacji Pomp Rzecznych"
 raw[which(raw$id == "741264"),]$name <- "SOHO Factory"
-raw[which(raw$id == "626424"),]$name <- "Dawny ZespÛ≥ BudynkÛw Mieszkalnych PKP"
+raw[which(raw$id == "626424"),]$name <- "Dawny Zesp√≥≈Ç Budynk√≥w Mieszkalnych PKP"
 raw[which(raw$id == "738728"),]$name <- "Dawna remiza tramwajowa"
-raw[which(raw$id == "726457"),]$name <- "Dawny ZespÛ≥ Miejskich Zak≥adÛw Sanitarnych"
-raw[which(raw$id == "625933"),]$name <- "Kamienica Miros≥awska, ob. Muzeum Historyczne XVII"
+raw[which(raw$id == "726457"),]$name <- "Dawny Zesp√≥≈Ç Miejskich Zak≈Çad√≥w Sanitarnych"
+raw[which(raw$id == "625933"),]$name <- "Kamienica Miros≈Çawska, ob. Muzeum Historyczne XVII"
 raw[which(raw$id == "626236"),]$name <- "Kamienica Falkiewiczowska, Muzeum Historyczne XV"
 raw <- subset(raw, !(raw$name == "Kamienica, ob. Muzeum Historyczne"))
 
